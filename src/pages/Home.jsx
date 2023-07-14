@@ -26,7 +26,7 @@ function Home(){
     // Showing Login Or Register Page According to the condition
     if(showLogin){
         return (
-            <div style={{border: '1px solid #fff'}}>
+            <div>
                 <h3>{`${import.meta.env.VITE_REACT_APP_NAME}`}</h3>
                 <Login/>
             </div>

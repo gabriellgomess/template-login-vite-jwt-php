@@ -19,18 +19,21 @@ function WithAuthentication({ children }) {
 
 const App = () => {
   return (
-    <MyContextProvider>       
-        <Routes>
-        <Route path={`${import.meta.env.VITE_REACT_APP_PATH}`} element={<Home />} />
-        <Route
-          path={`${import.meta.env.VITE_REACT_APP_PATH}dashboard`}
-          element={
-            <WithAuthentication>
-              <Dashboard />
-            </WithAuthentication>
-          }
-        />
-      </Routes>      
+    <MyContextProvider>
+        <div>
+          <Routes>
+            <Route path={`${import.meta.env.VITE_REACT_APP_PATH}`} element={<Home />} />
+            <Route
+              path={`${import.meta.env.VITE_REACT_APP_PATH}dashboard`}
+              element={
+                <WithAuthentication>
+                  <Dashboard />
+                </WithAuthentication>
+              }
+            />
+         </Routes>
+        </div>       
+              
     </MyContextProvider>
   );
 };

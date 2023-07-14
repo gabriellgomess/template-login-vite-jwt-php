@@ -59,17 +59,15 @@ function Login() {
   return (
     
         <form onSubmit={submitForm} noValidate>
-          <div style={{display: 'flex', flexDirection: 'column'}}>
-            <input
-              
+          <div>
+            <input              
               label="E-mail"
               name="email"
               type="email"
               value={state.userInfo.email}
               onChange={onChangeValue}
             />
-            <input
-              
+            <input              
               label="Senha"
               name="password"
               type="password"
